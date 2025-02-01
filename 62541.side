@@ -1,0 +1,2120 @@
+{
+  "id": "6689a8a9-8d52-4506-9814-32812b8364a3",
+  "version": "2.0",
+  "name": "62541",
+  "url": "https://www.zoomall.bg/",
+  "tests": [{
+    "id": "521395a3-ef52-46f8-94f5-26b6508f31bc",
+    "name": "TestLoginForgottenPasswordWithWrongEmail",
+    "commands": [{
+      "id": "34587280-2922-4e69-bce2-57b0033bc8f7",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d1c082f7-b3b5-4f98-848c-b3a18b3007ea",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "12f0817f-9045-4274-b2f6-a7aaf684b2fd",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3a89ce0a-b6b0-4ccb-9938-fd5c79cc31de",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.forgotten-password",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b03dd350-895a-4181-82f4-7e90163d9c91",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Генериране на нова парола",
+      "targets": [
+        ["linkText=Генериране на нова парола", "linkText"],
+        ["css=.forgotten-password", "css:finder"],
+        ["xpath=//a[contains(text(),'Генериране на нова парола')]", "xpath:link"],
+        ["xpath=//div[@id='login-content']/form/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/forgotten-password/')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Генериране на нова парола')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5bc230d2-962c-44fe-910f-89b55e74f66a",
+      "comment": "",
+      "command": "click",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='forgotten-password-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2be5874c-72d0-4936-be39-088f12f5daff",
+      "comment": "",
+      "command": "type",
+      "target": "name=email",
+      "targets": [
+        ["name=email", "name"],
+        ["css=input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='email']", "xpath:attributes"],
+        ["xpath=//form[@id='forgotten-password-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "nevalidenemail4321@gmail.com"
+    }, {
+      "id": "2425d813-014f-4882-898f-b09d85d21991",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-btn-submit",
+      "targets": [
+        ["id=login-btn-submit", "id"],
+        ["css=#login-btn-submit", "css:finder"],
+        ["xpath=//input[@id='login-btn-submit']", "xpath:attributes"],
+        ["xpath=//form[@id='forgotten-password-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b93ca94-4b4f-4b8e-bfaa-fe56ed7903dd",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.login-item > .success-message",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e021f930-516a-4262-aa3c-a633101f3232",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-message:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4c8555b5-2329-4792-97c2-3c66d63b7ca6",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "ac9182f1-3d94-48fc-bf4b-e5ae5443fcc1",
+    "name": "TestLoginWithValidEmailAndPassword",
+    "commands": [{
+      "id": "55e289c3-e8b5-4bf3-b3ec-b22ccb4377d7",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11a728a4-5bb9-4f6c-bda9-d1bdf88a8283",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b4cbf5b0-b0f4-4e2e-84cf-037d6a7f8700",
+      "comment": "",
+      "command": "click",
+      "target": "css=#profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26187795-f4e3-4b51-beb1-84cb0e981e58",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44e763dc-10bf-4bea-bee2-e8fb4461c7cb",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "validemailtest1234@gmail.com"
+    }, {
+      "id": "7ce480d4-69e9-459e-93ec-026359533f35",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-btn-submit",
+      "targets": [
+        ["id=login-btn-submit", "id"],
+        ["css=#login-btn-submit", "css:finder"],
+        ["xpath=//input[@id='login-btn-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87c690bb-6516-49a2-b2f3-42b6b5919715",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_password",
+      "targets": [
+        ["id=login_password", "id"],
+        ["name=password", "name"],
+        ["css=#login_password", "css:finder"],
+        ["xpath=//input[@id='login_password']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17b5b2c4-8070-4c7c-8b61-a551459811d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_password",
+      "targets": [
+        ["id=login_password", "id"],
+        ["name=password", "name"],
+        ["css=#login_password", "css:finder"],
+        ["xpath=//input[@id='login_password']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "!password1234"
+    }, {
+      "id": "aeba0857-9632-4968-9282-8c9f90a77ad0",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-btn-submit",
+      "targets": [
+        ["id=login-btn-submit", "id"],
+        ["css=#login-btn-submit", "css:finder"],
+        ["xpath=//input[@id='login-btn-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[3]/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "500dead3-a15d-4ca8-b2d0-fa579e3185d5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#profile-dropdown-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "87fa8c71-c166-4350-8099-80f9edf518d7",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96e5f0e9-56ec-44b7-ad64-d5a2335b919b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#user-details-text",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c4caef0d-44e8-43e8-a338-30d82844e6e7",
+    "name": "TestLoginWithWrongEmail",
+    "commands": [{
+      "id": "e8f50d36-4bf6-4c6f-8e28-a2b7642c296d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0aa12e73-c218-4b7b-808a-38ab291d7e19",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "733ca735-436b-40fd-a823-5ac130824d83",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72f87269-7533-4590-81cd-f81ca32c34c5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#login_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "03d6bd97-ee4f-4155-9ccc-82d76d294715",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "29c0f8be-e071-4405-a410-c8f6043bedc7",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "nevalidenemail4321@gmail.com"
+    }, {
+      "id": "804aa80a-8e74-4c57-aa17-b8e2006f7a99",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-btn-submit",
+      "targets": [
+        ["id=login-btn-submit", "id"],
+        ["css=#login-btn-submit", "css:finder"],
+        ["xpath=//input[@id='login-btn-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "61d64a85-e146-439d-aad4-fce5c2dc8795",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.error-visible",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "7ebf7bb8-104a-467e-a515-f4b8070dbe79",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-visible",
+      "targets": [],
+      "value": "Няма намерен потребител с въведения e-mail адрес. Регистрирай се сега."
+    }, {
+      "id": "32ee96d5-fc13-441e-b63d-b6f0bd60d2fc",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "de7e6647-6873-4c16-bcb4-04733a6e9381",
+    "name": "TestLoginWithWrongPassword",
+    "commands": [{
+      "id": "c3bf3d1d-e6da-491b-9f53-a4fc1568b3c1",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0b2e068-3d24-4e1c-a2b5-ed586ca33f81",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "269c0d88-a3ee-4dd1-a561-e7fb4f7a30c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9a0f95d3-bdec-43b4-bf9b-6547fef6fbdc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#login_email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0123609d-9189-4498-96bb-cb3170345beb",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8056cf0-9b37-46f2-99bb-a7a3fc9282f5",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_email",
+      "targets": [
+        ["id=login_email", "id"],
+        ["name=email", "name"],
+        ["css=#login_email", "css:finder"],
+        ["xpath=//input[@id='login_email']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "validemailtest1234@gmail.com"
+    }, {
+      "id": "d74f0dce-22ca-433d-a32c-9ee4776dcdf2",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-btn-submit",
+      "targets": [
+        ["id=login-btn-submit", "id"],
+        ["css=#login-btn-submit", "css:finder"],
+        ["xpath=//input[@id='login-btn-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[3]/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7276e9fc-4a4e-4fdd-a641-8dacd3a3c782",
+      "comment": "",
+      "command": "click",
+      "target": "id=login_password",
+      "targets": [
+        ["id=login_password", "id"],
+        ["name=password", "name"],
+        ["css=#login_password", "css:finder"],
+        ["xpath=//input[@id='login_password']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fcb9df8b-b159-42ef-9b69-f6445b89a511",
+      "comment": "",
+      "command": "type",
+      "target": "id=login_password",
+      "targets": [
+        ["id=login_password", "id"],
+        ["name=password", "name"],
+        ["css=#login_password", "css:finder"],
+        ["xpath=//input[@id='login_password']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "invalidpassword"
+    }, {
+      "id": "6150786b-4aa3-4555-8eff-a2ecda69fbdc",
+      "comment": "",
+      "command": "click",
+      "target": "id=login-btn-submit",
+      "targets": [
+        ["id=login-btn-submit", "id"],
+        ["css=#login-btn-submit", "css:finder"],
+        ["xpath=//input[@id='login-btn-submit']", "xpath:attributes"],
+        ["xpath=//div[@id='login-content']/form/div[3]/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1bd6feb-a50d-47d6-9a2e-54653235743e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.error-visible",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "8c4405d2-daa8-4788-a05f-877931b8e9cc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-visible",
+      "targets": [],
+      "value": "Няма намерен потребител с въведените данни.\\n"
+    }]
+  }, {
+    "id": "5ce04e31-d993-4edd-8cb4-b93e277492b0",
+    "name": "TestAddToFavorites",
+    "commands": [{
+      "id": "34924070-e576-47ef-9a6c-f8e09e32c6c9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "949d694d-d08b-4537-b85c-c81547bea7c6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "815edc8c-960b-4690-ae87-3d2eb877d116",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//a[contains(text(),'Кучета')]",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6717ab00-664d-45d8-a569-7a1b2eb145db",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#dropdown-favorites-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "47ad7df4-4539-4d90-aeb0-cd1cd18466b9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#dropdown-favorites-button > .baloon",
+      "targets": [],
+      "value": "0"
+    }, {
+      "id": "ed7e4663-3cd4-48bb-9392-829541cab65f",
+      "comment": "",
+      "command": "click",
+      "target": "css=li > .active",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "86e07de9-bbc4-48c4-bd28-82a89fa7bfe9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(1) .favorite-button",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .favorite-button", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile/add-favorite/4578/')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36cd9553-488b-4fcf-ac7a-d350c82eb55f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#dropdown-favorites-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7005d2b8-9be7-4dbe-9630-7cb66d3eb450",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#dropdown-favorites-button > .baloon",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "9da850ad-7840-4b78-8b39-c1a41fdf7aef",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e45d82a8-b58e-41d9-86b1-424ed67bc1e4",
+    "name": "TestRemoveOnlyItemFromFavorites",
+    "commands": [{
+      "id": "812114f2-a498-47d9-b913-2cc246e1f594",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "79b7fb13-6ee2-4bd0-8d9c-6a06f4130833",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3c902bd1-4b57-4de9-86b8-7df29dae767c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#dropdown-favorites-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ba1569db-7dd6-4f14-a522-531cfbeeffd6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#dropdown-favorites-button > .baloon",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "fe7e3f0e-d882-468f-9af8-9996899ce851",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown-favorites-button",
+      "targets": [
+        ["id=dropdown-favorites-button", "id"],
+        ["linkText=1", "linkText"],
+        ["css=#dropdown-favorites-button", "css:finder"],
+        ["xpath=//a[@id='dropdown-favorites-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[3]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "87685a8a-b311-4176-90d8-bdabcb41b223",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fav-close",
+      "targets": [
+        ["css=.fav-close", "css:finder"],
+        ["xpath=//div[@id='favorites-carousel']/div/div/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile/delete-favorite/2644/')]", "xpath:href"],
+        ["xpath=//div/div/div/div/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fb3ff48-41df-4ab4-93ea-35adc03312c4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#no-favorites p",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "698e1dac-ef74-4ffb-9b9b-d8490522179d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#dropdown-favorites-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f81eaee0-78e5-45b1-ba08-4bbddc4f6df4",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "7502c985-ea41-46f2-ae86-eb2535652130",
+    "name": "TestTransferFromFavoritesToCart",
+    "commands": [{
+      "id": "fc3207d5-7241-488c-9b38-60446848fcc9",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "75f6bac1-e52f-49b0-b157-387ecfbc904e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1552x840",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "179e6582-e6ae-4520-8d48-dce4d01cdc7b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#dropdown-favorites-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "82efd01f-a633-40d4-bcbf-3d3b35d3199b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#dropdown-favorites-button > .baloon",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "ccef3f38-7bda-42da-857d-bcfa4419c4ee",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown-favorites-button",
+      "targets": [
+        ["id=dropdown-favorites-button", "id"],
+        ["linkText=1", "linkText"],
+        ["css=#dropdown-favorites-button", "css:finder"],
+        ["xpath=//a[@id='dropdown-favorites-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[3]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09e174a6-81fd-4be0-bf20-f6d02e8e57f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.buy-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3b82787-8388-4fcd-82c4-fce6ee90cbcd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Купи",
+      "targets": [
+        ["linkText=Купи", "linkText"],
+        ["css=.buy-button", "css:finder"],
+        ["xpath=(//a[contains(text(),'Купи')])[3]", "xpath:link"],
+        ["xpath=//div[@id='favorites-carousel']/div/div/div/div/div/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[11]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/div/div/div/div/div/div/div/div/div/a[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8eef30ab-6b78-4324-8018-e2f53dbf7407",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text:nth-child(2)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b550088e-4e52-4ea5-8024-bff4b5bf2af5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='fast-view-inner']/a[2]/span[2]", "xpath:idRelative"],
+        ["xpath=//a[2]/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "51648039-0e17-40cc-b397-d822edda07bc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#cart-count-txZ",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "f8192096-faa5-4fd5-8f76-58ebd378812c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-to-cart:nth-child(2) > span",
+      "targets": [
+        ["css=.add-to-cart:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "70516f8a-cd7c-4f0e-8e06-c09adb2d4988",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.selectric-cart-quantity .label",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "44722934-146d-4080-8586-b8e744a8d44b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "c0af8166-c171-4dd7-8347-92c6398cc948",
+    "name": "TestOpenProductDetailsFromFavs",
+    "commands": [{
+      "id": "55a30197-c161-4425-ab3e-327c547016c0",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8e5d85c-b34f-478f-b946-d5fecaa1698e",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d27e279-927e-445c-9cd1-6b33f60e9088",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#dropdown-favorites-button",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9b8bf97-4614-4def-8aa7-9575e87890d5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=#dropdown-favorites-button > .baloon",
+      "targets": [],
+      "value": "1"
+    }, {
+      "id": "48981e55-f99d-49ec-aa87-b8f6f3cd0357",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown-favorites-button",
+      "targets": [
+        ["id=dropdown-favorites-button", "id"],
+        ["linkText=1", "linkText"],
+        ["css=#dropdown-favorites-button", "css:finder"],
+        ["xpath=//a[@id='dropdown-favorites-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[2]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[3]", "xpath:href"],
+        ["xpath=//ul[2]/li[2]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e25afaff-01d3-4b01-985f-c7d0b39ac8ec",
+      "comment": "",
+      "command": "click",
+      "target": "css=.favorite-item p",
+      "targets": [
+        ["css=.favorite-item p", "css:finder"],
+        ["xpath=//div[@id='favorites-carousel']/div/div/div/div/div/div/div/a/p", "xpath:idRelative"],
+        ["xpath=//a/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "758c1f83-0f1d-43f8-9fec-8c5b85cc0154",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=product-images",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85a3862c-ed2c-4fb1-8b56-a7fdb4cf492b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=product-subheading",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b71be17d-1a8f-4e1a-aea2-2ad7d822a0c9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.product-background",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9d97adf-2a98-497b-af0f-9b9c41714591",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "93f70002-00e5-4134-bb48-1d0f9a215caa",
+    "name": "TestSearchByInvalidKeyword",
+    "commands": [{
+      "id": "64e33a8b-b879-41d4-b22f-7ec23e6d36ed",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a8b281c0-91ea-434f-a916-e86cdaf9992c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f453867-419a-4c54-9ffc-0e035560f99d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.search > a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "32d321b6-0bd6-4087-b6b1-38d7d0a8c2ed",
+      "comment": "",
+      "command": "click",
+      "target": "css=.search > a",
+      "targets": [
+        ["css=.search > a", "css:finder"],
+        ["xpath=//ul[@id='header-icons']/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[2]", "xpath:href"],
+        ["xpath=//ul[2]/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "153e298b-5f19-409c-8bfc-6806fb6edc53",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35c1f3b5-a49f-42ab-99b4-decbd924ae9d",
+      "comment": "",
+      "command": "type",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "невалидна ключова дума"
+    }, {
+      "id": "a3c54f7b-fb1e-4d53-83f6-b3e5a21f4fbc",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css:finder"],
+        ["xpath=//input[@id='search']", "xpath:attributes"],
+        ["xpath=//form[@id='search-form']/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "b8322265-1b74-40d3-94b1-431e279701d3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f8c8746c-a9c8-4a01-ac55-33e5079c5b7b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [],
+      "value": "НЕ СА НАМЕРЕНИ РЕЗУЛТАТИ ОТ ТЪРСЕНЕТО."
+    }, {
+      "id": "9b1074da-1a34-46bd-a16c-5945bb09ae63",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "2577ec10-9766-4e49-a801-3dbaf477815d",
+    "name": "TestAddPetToProfile",
+    "commands": [{
+      "id": "c1761c9a-1654-4229-abd2-9a8fa2c57697",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d6c2d58-99b9-4d53-b1ee-eafc44b7bea6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2e2408b6-062b-4914-90af-0d4dbee0b5be",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6d582af-4294-43ed-a915-723c0a9ca6d5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#user-details li:nth-child(3) > a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d58ff5fe-4c08-46ee-a63e-318599ca3aa3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Домашни любимци",
+      "targets": [
+        ["linkText=Домашни любимци", "linkText"],
+        ["css=#user-details li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Домашни любимци')]", "xpath:link"],
+        ["xpath=//div[@id='user-details']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile/pets/')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/div[2]/div/ul/li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Домашни любимци')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54f598d1-90ec-48a1-a2c6-e19b930401b9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#new-invoice",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d466a5f5-f6a7-49a0-ba7e-dc8375dddc47",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-invoice",
+      "targets": [
+        ["id=new-invoice", "id"],
+        ["css=#new-invoice", "css:finder"],
+        ["xpath=//a[contains(text(),'Добави домашен любимец')]", "xpath:link"],
+        ["xpath=//a[@id='new-invoice']", "xpath:attributes"],
+        ["xpath=//form[@id='invoice-form']/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[18]", "xpath:href"],
+        ["xpath=//form/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "515651bf-39f0-4bfa-8cb9-9a7d85abe697",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a32cbfc7-3981-4273-93d0-9e39f90c4cd2",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Ричи"
+    }, {
+      "id": "51acc999-f420-4ee6-bf33-a8e76425e1c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-hover .label",
+      "targets": [
+        ["css=.selectric-hover .label", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[4]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Птици')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b535a1d4-7ea6-4de2-8c9b-d47c361f9895",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-hover li:nth-child(7)",
+      "targets": [
+        ["css=.selectric-hover li:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[4]/div/div[3]/div/ul/li[7]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[7]", "xpath:position"],
+        ["xpath=//li[contains(.,'Куче (малко до 10 кг)')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3d02893-c7d6-4f0e-9fce-ad22ca20ee42",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='new-invoice-form']/div/div[7]/div/div/div/div[2]/span",
+      "targets": [
+        ["css=.selectric-above .label", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[7]/div/div/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2015')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d233dad-6abe-4fdc-81b8-cfbd70653377",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='new-invoice-form']/div/div[7]/div/div/div/div[3]/div/ul/li[9]",
+      "targets": [
+        ["css=.selected:nth-child(9)", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[7]/div/div/div/div[3]/div/ul/li[9]", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div/div/div[3]/div/ul/li[9]", "xpath:position"],
+        ["xpath=//li[contains(.,'2015')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a3ce9a1-6a79-46cb-be50-cdcec28dc6f4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[2]/div/div[2]/span",
+      "targets": [
+        ["css=.selectric-hover .label", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[2]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Януари')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b157a36-7f94-401b-a0de-68c0d2d32cec",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[2]/div/div[3]/div/ul/li[9]",
+      "targets": [
+        ["css=.selectric-hover li:nth-child(9)", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[2]/div/div[3]/div/ul/li[9]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[3]/div/ul/li[9]", "xpath:position"],
+        ["xpath=//li[contains(.,'Септември')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d87f6959-4ac1-417b-83b0-1c15eb6fcd48",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[3]/div/div[2]/span",
+      "targets": [
+        ["css=.selectric-hover .label", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[3]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[3]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "532af185-5d24-4125-b3ea-0d9ef355003a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[3]/div/div[3]/div/ul/li[4]",
+      "targets": [
+        ["css=.selectric-hover li:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[7]/div/div[3]/div/div[3]/div/ul/li[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[3]/div/ul/li[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7027bc2a-91b1-4673-bd36-8290f84bd9c6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.label_radio:nth-child(1)",
+      "targets": [
+        ["css=.label_radio:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[9]/div/label", "xpath:idRelative"],
+        ["xpath=//div[9]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Мъжки')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7f07fe28-de54-4aa4-98ac-9e0c2b8bc3f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-form",
+      "targets": [
+        ["id=submit-form", "id"],
+        ["css=#submit-form", "css:finder"],
+        ["xpath=//a[contains(text(),'Запази промените')]", "xpath:link"],
+        ["xpath=//a[@id='submit-form']", "xpath:attributes"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[10]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[20]", "xpath:href"],
+        ["xpath=//div[10]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1b057bd-b9aa-4ad3-bcc7-2a49b6cc5ec5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.order-item:nth-child(1) > .order-right",
+      "targets": [],
+      "value": "Ричи"
+    }, {
+      "id": "829e6794-ed28-457a-a70d-9d05eb9e3827",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.order-item:nth-child(2) > .order-right",
+      "targets": [],
+      "value": "Куче (малко до 10 кг)"
+    }, {
+      "id": "de9b9256-1494-458d-a361-68a5b725136d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.order-item:nth-child(3) > .order-right",
+      "targets": [],
+      "value": "Друга порода"
+    }, {
+      "id": "3f6acad3-371f-4847-89da-2c06420a9bad",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.order-item:nth-child(4) > .order-right",
+      "targets": [],
+      "value": "04.09.2015"
+    }, {
+      "id": "8d2bb983-5b66-4e11-84fd-1d848da46f32",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.order-item:nth-child(5) > .order-right",
+      "targets": [],
+      "value": "Мъжки"
+    }, {
+      "id": "9a9b0adf-7e10-4306-b198-b03c3646b865",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "6ab7f421-f2de-4071-83ed-598926829a6a",
+    "name": "TestAddDeliveryAddressToProfile",
+    "commands": [{
+      "id": "f06d16fc-e8b4-439c-ada7-d3a5c82fbc9d",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "06e301f1-c61b-4325-8836-875cf7b525dd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "55d0afc5-dc59-46b5-8c3d-e1a2ec97b03d",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "32fb785f-2deb-44c3-9b49-669b4159f5b1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#user-details li:nth-child(4) > a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca024eab-dd48-4a51-9a70-09e737871b8a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Адреси за доставка",
+      "targets": [
+        ["linkText=Адреси за доставка", "linkText"],
+        ["css=#user-details li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Адреси за доставка')]", "xpath:link"],
+        ["xpath=//div[@id='user-details']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile/delivery-data/')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/div[2]/div/ul/li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Адреси за доставка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8c41a12-f3b2-42c0-af1d-1008a5c9f5c0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#new-invoice",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "85f99551-9633-4664-b656-44ff34a9e772",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-invoice",
+      "targets": [
+        ["id=new-invoice", "id"],
+        ["css=#new-invoice", "css:finder"],
+        ["xpath=//a[contains(text(),'Добави адрес')]", "xpath:link"],
+        ["xpath=//a[@id='new-invoice']", "xpath:attributes"],
+        ["xpath=//div[@id='profile-content']/div/div/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[18]", "xpath:href"],
+        ["xpath=//div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "51cacceb-598a-4f27-9a7f-90cf85b61e61",
+      "comment": "",
+      "command": "click",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#office-delivery #name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "52cc69c8-36b1-45fd-be3d-d06d96085533",
+      "comment": "",
+      "command": "type",
+      "target": "id=name",
+      "targets": [
+        ["id=name", "id"],
+        ["name=name", "name"],
+        ["css=#office-delivery #name", "css:finder"],
+        ["xpath=//input[@id='name']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Валидно Име"
+    }, {
+      "id": "e3fe6196-b6a6-40a6-946c-2fbe36425e2c",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#office-delivery #phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ce93e54f-a56a-494e-98a4-e57505c75353",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone",
+      "targets": [
+        ["id=phone", "id"],
+        ["name=phone", "name"],
+        ["css=#office-delivery #phone", "css:finder"],
+        ["xpath=//input[@id='phone']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "0123456789"
+    }, {
+      "id": "94fa248e-2206-4685-bdbf-f78bce58f25c",
+      "comment": "",
+      "command": "click",
+      "target": "id=location_name",
+      "targets": [
+        ["id=location_name", "id"],
+        ["name=location_name", "name"],
+        ["css=#office-delivery #location_name", "css:finder"],
+        ["xpath=//input[@id='location_name']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0002139-1302-49a8-8251-871b3913d6e5",
+      "comment": "",
+      "command": "type",
+      "target": "id=location_name",
+      "targets": [
+        ["id=location_name", "id"],
+        ["name=location_name", "name"],
+        ["css=#office-delivery #location_name", "css:finder"],
+        ["xpath=//input[@id='location_name']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/input", "xpath:position"]
+      ],
+      "value": "гр. ВАРНА, п.к. 9000 общ. ВАРНА, обл. ВАРНА"
+    }, {
+      "id": "40c4fe86-38c8-4ea9-8a74-bbbb97de3c92",
+      "comment": "",
+      "command": "click",
+      "target": "id=office_name",
+      "targets": [
+        ["id=office_name", "id"],
+        ["name=office_name", "name"],
+        ["css=#office_name", "css:finder"],
+        ["xpath=//input[@id='office_name']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div[3]/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "943b8833-bc0b-4f75-b504-3314c4b0d435",
+      "comment": "",
+      "command": "type",
+      "target": "id=office_name",
+      "targets": [
+        ["id=office_name", "id"],
+        ["name=office_name", "name"],
+        ["css=#office_name", "css:finder"],
+        ["xpath=//input[@id='office_name']", "xpath:attributes"],
+        ["xpath=//div[@id='office-delivery']/form/div[3]/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "ЛЕВСКИ (КВ.) [661] ул. СТУДЕНТСКА No 4"
+    }, {
+      "id": "1347a040-443e-4efa-a866-1c8831066ea7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-lg-12 > .yellow-button",
+      "targets": [
+        ["css=.col-lg-12 > .yellow-button", "css:finder"],
+        ["xpath=//div[@id='office-delivery']/form/div[4]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35b0cb1e-db80-41da-afb5-d19653cef45e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": "Адресът за доставка беше успешно редактиран."
+    }, {
+      "id": "44bcb9e7-2131-4572-a095-ba12639481c9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "562ef535-c27e-4076-aed3-77ee77773877",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "5fd0ac02-d89d-4323-b81f-305153cd10fd",
+    "name": "TestAddCorrectDataForInvoice",
+    "commands": [{
+      "id": "046359e7-5901-44b3-b42c-431b6bc8f523",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "058a3964-47a3-42a3-8105-64efc05097c3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1528x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ebf87f1-830e-4b07-a0a9-02d9b0836442",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f476302c-a414-4631-ad00-7045c8e6b441",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#user-details li:nth-child(5) > a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ad0cb5f-c564-4a8f-847f-73aef9a2cbd9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Данни за фактура",
+      "targets": [
+        ["linkText=Данни за фактура", "linkText"],
+        ["css=#user-details li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Данни за фактура')]", "xpath:link"],
+        ["xpath=//div[@id='user-details']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile/invoice-data/')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/div[2]/div/ul/li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Данни за фактура')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "eaaeed5d-5b1f-4ded-9118-f24cb38adc5e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#new-invoice",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "77186a37-726e-4b8f-b769-7ff7089ebd31",
+      "comment": "",
+      "command": "click",
+      "target": "id=new-invoice",
+      "targets": [
+        ["id=new-invoice", "id"],
+        ["css=#new-invoice", "css:finder"],
+        ["xpath=//a[contains(text(),'Добави данни')]", "xpath:link"],
+        ["xpath=//a[@id='new-invoice']", "xpath:attributes"],
+        ["xpath=//form[@id='invoice-form']/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[18]", "xpath:href"],
+        ["xpath=//form/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6894aff-93db-4859-b273-5b949d99057a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.r_off",
+      "targets": [
+        ["css=.r_off", "css:finder"],
+        ["xpath=//div[@id='invoice-type-options']/div/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Физическо лице')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "45294223-126b-4064-b66a-3adb0762fdf7",
+      "comment": "",
+      "command": "click",
+      "target": "id=invoice_person_name",
+      "targets": [
+        ["id=invoice_person_name", "id"],
+        ["name=invoice_person_name", "name"],
+        ["css=#invoice_person_name", "css:finder"],
+        ["xpath=//input[@id='invoice_person_name']", "xpath:attributes"],
+        ["xpath=//div[@id='person-fields']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9feb81a-b149-43af-828d-0b91c640dd22",
+      "comment": "",
+      "command": "type",
+      "target": "id=invoice_person_name",
+      "targets": [
+        ["id=invoice_person_name", "id"],
+        ["name=invoice_person_name", "name"],
+        ["css=#invoice_person_name", "css:finder"],
+        ["xpath=//input[@id='invoice_person_name']", "xpath:attributes"],
+        ["xpath=//div[@id='person-fields']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Валидно Име"
+    }, {
+      "id": "bc3c7589-b592-4c58-9f2d-3696de438d79",
+      "comment": "",
+      "command": "click",
+      "target": "id=invoice_person_address",
+      "targets": [
+        ["id=invoice_person_address", "id"],
+        ["name=invoice_person_address", "name"],
+        ["css=#invoice_person_address", "css:finder"],
+        ["xpath=//input[@id='invoice_person_address']", "xpath:attributes"],
+        ["xpath=//div[@id='person-fields']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "deb94c09-f1ba-4e2d-9099-7d348e4143d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=invoice_person_address",
+      "targets": [
+        ["id=invoice_person_address", "id"],
+        ["name=invoice_person_address", "name"],
+        ["css=#invoice_person_address", "css:finder"],
+        ["xpath=//input[@id='invoice_person_address']", "xpath:attributes"],
+        ["xpath=//div[@id='person-fields']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[4]/input", "xpath:position"]
+      ],
+      "value": "ЛЕВСКИ (КВ.) ул. СТУДЕНТСКА No 4"
+    }, {
+      "id": "253a23ad-0c20-48cd-a83d-f1a4aafb038f",
+      "comment": "",
+      "command": "click",
+      "target": "id=invoice_person_location",
+      "targets": [
+        ["id=invoice_person_location", "id"],
+        ["name=invoice_person_location", "name"],
+        ["css=#invoice_person_location", "css:finder"],
+        ["xpath=//input[@id='invoice_person_location']", "xpath:attributes"],
+        ["xpath=//div[@id='person-fields']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b849ebc0-2b62-4beb-bfe9-c3a5c7f59b96",
+      "comment": "",
+      "command": "type",
+      "target": "id=invoice_person_location",
+      "targets": [
+        ["id=invoice_person_location", "id"],
+        ["name=invoice_person_location", "name"],
+        ["css=#invoice_person_location", "css:finder"],
+        ["xpath=//input[@id='invoice_person_location']", "xpath:attributes"],
+        ["xpath=//div[@id='person-fields']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[6]/input", "xpath:position"]
+      ],
+      "value": "гр. Варна"
+    }, {
+      "id": "02247eda-23df-4bb6-a3e3-c8188533d50e",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-form",
+      "targets": [
+        ["id=submit-form", "id"],
+        ["css=#submit-form", "css:finder"],
+        ["xpath=//a[contains(text(),'Запази промените')]", "xpath:link"],
+        ["xpath=//a[@id='submit-form']", "xpath:attributes"],
+        ["xpath=//div[@id='new-invoice-form']/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[19]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6fcdcf3e-1b77-4622-ab21-0a2ba14b2fae",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16244b8e-1893-46b6-a171-fa711590bf93",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": "Данните за фактура бяха успешно запазени."
+    }, {
+      "id": "98d54031-545d-4b2d-bd9e-0a09f04cc68b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1c5e47d9-be9e-47c7-8548-a111156821e8",
+    "name": "TestSubscribeToZooMallBulletin",
+    "commands": [{
+      "id": "aaf2d7ad-2e1e-4e0e-b280-3a6f2bc484be",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "10758586-69a0-4ef3-8d32-d925c10813c3",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f88020a-baca-4484-b557-6dcb63da0ffc",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5000b9be-f8fb-4830-a46d-d3e08487fbc3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#user-details li:nth-child(6) > a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b9196e3e-ff8a-43c2-a4d9-332f1a77833b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Абонамент за новини и промоции",
+      "targets": [
+        ["linkText=Абонамент за новини и промоции", "linkText"],
+        ["css=#user-details li:nth-child(6) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Абонамент за новини и промоции')]", "xpath:link"],
+        ["xpath=//div[@id='user-details']/ul/li[6]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/profile/newsletter/')]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/div[2]/div/ul/li[6]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Абонамент за новини и промоции')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ea61e71-fccc-4e1d-a7e7-7974673308f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-item:nth-child(2) > label",
+      "targets": [
+        ["css=.form-item:nth-child(2) > label", "css:finder"],
+        ["xpath=//form[@id='profile-newsletter-form']/div/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"],
+        ["xpath=//label[contains(.,'Желая да получавам Бюлетина на ZooMall')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "439372e5-3e20-4316-86ba-5d81a4b3c8a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-item:nth-child(5) > label",
+      "targets": [
+        ["css=.form-item:nth-child(5) > label", "css:finder"],
+        ["xpath=//form[@id='profile-newsletter-form']/div[2]/label", "xpath:idRelative"],
+        ["xpath=//div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Новини')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6246189-89df-4d4b-a6ef-29aa28229ce0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.form-item:nth-child(6) > label",
+      "targets": [
+        ["css=.form-item:nth-child(6) > label", "css:finder"],
+        ["xpath=//form[@id='profile-newsletter-form']/div[3]/label", "xpath:idRelative"],
+        ["xpath=//div[3]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Промоции')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e58ebeab-cd9f-4c35-a36d-818b1591d437",
+      "comment": "",
+      "command": "click",
+      "target": "css=.yellow-button",
+      "targets": [
+        ["css=.yellow-button", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-newsletter-form']/div[4]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3aa23001-805a-4f86-8f54-2df2c81bd953",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7cfc47a0-a831-40db-b562-73c684f4216a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": "Настройките за абонамент бяха успешно запазени."
+    }, {
+      "id": "01fe4813-bcfc-41a7-99d2-5f627b436a54",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "d4a412d4-a69a-413c-ad18-c4bb811d3752",
+    "name": "TestEditProfileInfo",
+    "commands": [{
+      "id": "c4a062d8-edd8-49be-a32e-2b46687d3959",
+      "comment": "",
+      "command": "open",
+      "target": "https://www.zoomall.bg/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "515f169c-e55e-4c8b-85d0-b2291605884b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ff5d4b0d-29a8-4595-825c-2dbce8b50161",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[4]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf5667e2-b3b1-4069-81e9-70f8e276cb92",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=#user-details li:nth-child(1) > a",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "07d07354-45b6-4ab0-8f2a-2ada320a6115",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Информация за профила",
+      "targets": [
+        ["linkText=Информация за профила", "linkText"],
+        ["css=#user-details li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Информация за профила')]", "xpath:link"],
+        ["xpath=//div[@id='user-details']/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/profile/')])[3]", "xpath:href"],
+        ["xpath=//div[5]/div/div/div/div[2]/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Информация за профила')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a60b8cf1-9ab0-4dc3-98eb-2a9244a0ddab",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f113bee8-a29d-46b1-bffb-89f6f0158f43",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Валидно"
+    }, {
+      "id": "7f5579c1-c537-443e-8051-bce9ddafd4c9",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastname",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8980fe72-e4db-4ccf-8528-f116dce71f4f",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Име"
+    }, {
+      "id": "e05d4a17-7437-4972-b11f-3caea3eca1f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70066a24-36c9-4582-8e39-53d2fc006b4a",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[4]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "-23456789"
+    }, {
+      "id": "e02b2fb2-ec6e-4797-8503-b3489e7d8624",
+      "comment": "",
+      "command": "click",
+      "target": "css=.label_radio:nth-child(3)",
+      "targets": [
+        ["css=.label_radio:nth-child(3)", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[5]/label[3]", "xpath:idRelative"],
+        ["xpath=//label[3]", "xpath:position"],
+        ["xpath=//label[contains(.,'Жена')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "332430a3-3d01-42cd-8a5b-88cf1d5899d5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='profile-form']/div[7]/div/div/div/div[2]/div[2]/span",
+      "targets": [
+        ["css=.selectric-hover .label", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[7]/div/div/div/div[2]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Година')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be497971-2a55-418b-ba51-f3188e22c2e4",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='profile-form']/div[7]/div/div/div/div[2]/div[3]/div/ul/li[25]",
+      "targets": [
+        ["css=.selectric-hover li:nth-child(25)", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[7]/div/div/div/div[2]/div[3]/div/ul/li[25]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[25]", "xpath:position"],
+        ["xpath=//li[contains(.,'2000')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d234b868-68e3-46bf-b9cf-cd5a0b537fc5",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='profile-form']/div[7]/div/div[2]/div/div[2]/div[2]/span",
+      "targets": [
+        ["css=.selectric-hover .label", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[7]/div/div[2]/div/div[2]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Месец')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c3b2f1e-9977-4f61-9857-19dcfc44b0aa",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='profile-form']/div[7]/div/div[2]/div/div[2]/div[3]/div/ul/li[3]",
+      "targets": [
+        ["css=.selectric-open li:nth-child(3)", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[7]/div/div[2]/div/div[2]/div[3]/div/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[3]/div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'Февруари')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c68b807-9eb6-4921-a96b-27dcb625c2a6",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='profile-form']/div[7]/div/div[3]/div/div[2]/div[2]/span",
+      "targets": [
+        ["css=.selectric-hover .label", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[7]/div/div[3]/div/div[2]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Ден')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "06d20abb-4494-46dc-9d0c-81a44004a977",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//form[@id='profile-form']/div[7]/div/div[3]/div/div[2]/div[3]/div/ul/li[2]",
+      "targets": [
+        ["css=.selectric-hover li:nth-child(2)", "css:finder"],
+        ["xpath=//form[@id='profile-form']/div[7]/div/div[3]/div/div[2]/div[3]/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[3]/div/ul/li[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a85138b8-174f-4a8c-8856-3fd751f09115",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9943f74e-17c6-4aef-8205-6188b385bda6",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[10]/input", "xpath:idRelative"],
+        ["xpath=//div[10]/input", "xpath:position"]
+      ],
+      "value": "!password1234"
+    }, {
+      "id": "73732c0c-f5d2-48ed-8521-d62189471fbc",
+      "comment": "",
+      "command": "click",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[12]/input", "xpath:idRelative"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edb54dea-5d78-486a-8450-d1837fb0ee45",
+      "comment": "",
+      "command": "type",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[12]/input", "xpath:idRelative"],
+        ["xpath=//div[12]/input", "xpath:position"]
+      ],
+      "value": "!password1234"
+    }, {
+      "id": "6f5282b9-5764-4beb-8734-c5a76a0cf5e5",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn",
+      "targets": [
+        ["name=btn", "name"],
+        ["css=.g-recaptcha", "css:finder"],
+        ["xpath=//button[@name='btn']", "xpath:attributes"],
+        ["xpath=//form[@id='profile-form']/div[13]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75315b15-aed5-4e1b-97cf-d0b8144c2ad8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1a6876b8-e2c7-4d14-9818-5bb677b4cf64",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.alert li",
+      "targets": [],
+      "value": "Информацията за профила беше успешно запазена."
+    }, {
+      "id": "da47f75a-1fae-40bc-8111-0f15641a5c6d",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "83c0a83f-6c53-4a0f-bf10-05a776b2fd31",
+    "name": "Login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["521395a3-ef52-46f8-94f5-26b6508f31bc", "ac9182f1-3d94-48fc-bf4b-e5ae5443fcc1", "c4caef0d-44e8-43e8-a338-30d82844e6e7", "de7e6647-6873-4c16-bcb4-04733a6e9381"]
+  }, {
+    "id": "33f83117-7ac4-40cf-8b87-0280c5a7515d",
+    "name": "Favorites",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7502c985-ea41-46f2-ae86-eb2535652130", "e45d82a8-b58e-41d9-86b1-424ed67bc1e4", "c0af8166-c171-4dd7-8347-92c6398cc948", "5ce04e31-d993-4edd-8cb4-b93e277492b0"]
+  }, {
+    "id": "22e7c75d-2e4a-46b4-a6b7-5526c8af7669",
+    "name": "Profile",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6ab7f421-f2de-4071-83ed-598926829a6a", "5fd0ac02-d89d-4323-b81f-305153cd10fd", "2577ec10-9766-4e49-a801-3dbaf477815d", "d4a412d4-a69a-413c-ad18-c4bb811d3752", "1c5e47d9-be9e-47c7-8548-a111156821e8"]
+  }, {
+    "id": "c9951cff-c45f-4059-9ad4-ab9a8c69c64b",
+    "name": "Search",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["93f70002-00e5-4134-bb48-1d0f9a215caa"]
+  }],
+  "urls": ["https://www.zoomall.bg/"],
+  "plugins": []
+}

@@ -1,0 +1,3473 @@
+{
+  "id": "08e4517f-1690-4b52-9e63-85bcd1549475",
+  "version": "2.0",
+  "name": "ZOOMALL_tests",
+  "url": "https://www.zoomall.bg",
+  "tests": [{
+    "id": "b3d2ccb1-0967-4809-9ed0-2c8b9943a4a7",
+    "name": "TestRegistrationWithEmptyFields",
+    "commands": [{
+      "id": "99747d7c-5fa2-4067-a0c0-c98478de0d6f",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3d9980d4-b297-4be6-8548-117b1df44d4d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "837c6c5e-404f-4245-a41b-3fe48ec1cb3a",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f6c248b-c819-4f4f-b631-f2bdb2089e54",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=#register-tabs > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[9]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c83cb394-1d68-46ca-8b24-95f3dec5b78b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[13]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f66ea52-2667-45a0-b625-c9d1d201bdee",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[14]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": "Регистрация"
+    }, {
+      "id": "e42c8b4a-631e-4439-a6fa-d8bc7032e83e",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn",
+      "targets": [
+        ["name=btn", "name"],
+        ["css=.g-recaptcha", "css:finder"],
+        ["xpath=//button[@name='btn']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[17]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8b2b55ef-835e-404d-a00e-6ad2bd5fbf1d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 2",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "37a825b7-a2d5-4629-a59e-4f545e68cef1",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "62058dcc-3120-4802-9918-ab0fe164aef1",
+      "comment": "",
+      "command": "echo",
+      "target": "${index}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6a05741-35bf-4382-9cbf-39a17b1619a3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error:nth-child(${index}) > .error-span",
+      "targets": [
+        ["css=.error:nth-child(2) > .error-span", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Моля, въведете своето име.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5573a6e7-60b1-41d0-8211-3cb35943ed71",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${index}+1",
+      "targets": [],
+      "value": "index"
+    }, {
+      "id": "990bdfd0-4aa8-4d2f-b7ca-6c0caccb4467",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${index}<=7",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "dd27a607-fde1-4929-a2be-ff512d4a143d",
+    "name": "TestRegistrationWIthTooShortPassword",
+    "commands": [{
+      "id": "ee24126e-b208-49f0-bed4-2e417960d4cd",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e6dc9db-8001-4f6a-b62c-b2bceb12ef0b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d2b48ae-779f-4acf-87a5-d2eb16a6d78b",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05044316-f9ae-4b9c-825a-5c82dff12567",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9dbd9a4-3f9c-4e88-bdbf-9a07eb10d53b",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e222784-65e7-4155-a0a7-542ac05e065e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=#register-tabs > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[9]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2347c6c5-1bf0-4e23-9618-b2a7fffb3638",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[13]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "497d5c9f-1847-4092-bfe9-de14c6fb638d",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[14]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": "Регистрация"
+    }, {
+      "id": "61a70fb5-28af-4a39-97bf-974e7b0f3e46",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "eb2d2915-d75a-4684-bfc4-7cf7812056c7",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "Николета"
+    }, {
+      "id": "3e08d9ea-ea85-4ba1-a0c7-5458c48f8109",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ca488d6-8236-4f42-a0cb-0c67e2979225",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": "Бейска"
+    }, {
+      "id": "59021f75-6512-483f-89b8-7f3139726673",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a1e07c1-de39-4ad5-a2e8-7037eb43f42b",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "beyska@uni-sofia.bg"
+    }, {
+      "id": "2d66e8fd-fcd8-4e6a-ace2-ac88f67fee9a",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1bb900f5-2166-4d95-b1dd-86f641f65c91",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "0876658514"
+    }, {
+      "id": "4ad67e7f-30dd-4001-a1ae-cfef82074c9e",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ed95cd9-b0e4-4003-9cec-ceeed9a74411",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "i"
+    }, {
+      "id": "8d105a1e-f36a-4830-bc4a-898820f093bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4251eef0-4480-46ff-be0e-25857838aad2",
+      "comment": "",
+      "command": "type",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "i"
+    }, {
+      "id": "3da134ed-8582-4851-a296-03e8190ff728",
+      "comment": "",
+      "command": "click",
+      "target": "css=.register-item > .r_off",
+      "targets": [
+        ["css=.register-item > .r_off", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[9]/label[2]", "xpath:idRelative"],
+        ["xpath=//label[2]", "xpath:position"],
+        ["xpath=//label[contains(.,'Жена')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d9895791-88ac-421b-88ff-b621260580ff",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn",
+      "targets": [
+        ["name=btn", "name"],
+        ["css=.g-recaptcha", "css:finder"],
+        ["xpath=//button[@name='btn']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[17]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "86323fce-cd31-440d-9b4b-f24a2a4d2097",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-visible",
+      "targets": [
+        ["css=.error-visible", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[6]/span", "xpath:idRelative"],
+        ["xpath=//div[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Моля, въведете своята парола от поне 3 символа.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "738f77dc-a58f-4178-b04b-a4f5d92037d9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.error-visible",
+      "targets": [
+        ["css=.error-visible", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[6]/span", "xpath:idRelative"],
+        ["xpath=//div[6]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Моля, въведете своята парола от поне 3 символа.')]", "xpath:innerText"]
+      ],
+      "value": "Моля, въведете своята парола от поне 3 символа."
+    }]
+  }, {
+    "id": "6785ae0b-b86e-4023-8eef-198250bae584",
+    "name": "TestRegistrationWithAlreadyUsedEmail",
+    "commands": [{
+      "id": "f6559351-e0db-468a-ba25-4262a89086ce",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f04074fc-003e-4f89-b946-aa798aa68583",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "18fc4eec-0364-473a-88df-c01b2cc9c589",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "767339cd-4cf5-4c90-b68f-a61863286fb1",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=#register-tabs > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[9]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ed1f1cc4-83f1-4b0b-82f8-6e815c6ab897",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[13]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc830905-e0b6-45b3-ab03-393d08ffc10f",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[14]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": "Регистрация"
+    }, {
+      "id": "b2d4a417-f005-4a06-b9d6-16e38dc9a984",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1363d3bf-96d3-4228-9f62-65f7f897af52",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "Николета"
+    }, {
+      "id": "49854a54-033b-4fd2-a414-61cb1b4738c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "22414465-6451-4cb8-a124-c1abfd02a531",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": "Бейска"
+    }, {
+      "id": "6c127ae2-57ac-48a3-af90-1f5e073e817d",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dae2fa7f-fa7e-47c4-a82b-a7b0c71cc526",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "nikolet.b@abv.bg"
+    }, {
+      "id": "809c9c05-41b1-455f-8ba2-225eb2519873",
+      "comment": "",
+      "command": "click",
+      "target": "css=.register-item:nth-child(5)",
+      "targets": [
+        ["css=.register-item:nth-child(5)", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[5]", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9959a89a-2974-4436-b900-11e964ce9a2f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-visible",
+      "targets": [
+        ["css=.error-visible", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Въведеният e-mail адрес е зает. Aко Вие сте ползвателя на този профил, можете да генерирате нова парола тук.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c4eaa2e6-9494-4569-b4f7-7cd4691d7aa1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.error-visible",
+      "targets": [
+        ["css=.error-visible", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[4]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Въведеният e-mail адрес е зает. Aко Вие сте ползвателя на този профил, можете да генерирате нова парола тук.')]", "xpath:innerText"]
+      ],
+      "value": "Въведеният e-mail адрес е зает. Aко Вие сте ползвателя на този профил, можете да генерирате нова парола тук."
+    }]
+  }, {
+    "id": "ff1a2eb8-500f-4829-85ff-96a614a7f56c",
+    "name": "RegistrationWithIllegalEmail",
+    "commands": [{
+      "id": "d868fd09-a6ee-4093-802c-f3d493eebc97",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2301ddcd-41b5-40f4-a600-9143fef0cee5",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b82dfb8f-cf6b-47d7-a447-e122ae4d0319",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7aceacad-cfc6-4e64-9169-e9ca408394c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=#register-tabs > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[9]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0314d7f4-a065-4aa1-a564-8f53bddb9a14",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "965b4111-91a1-4f44-bd07-0f4e401f1654",
+      "comment": "",
+      "command": "echo",
+      "target": "${registration_page}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0829db55-83df-4f5e-bafa-609e7202c902",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "John"
+    }, {
+      "id": "f47bd767-7ebc-429a-a3f9-5afbe63d2894",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f25d7cc8-463f-44ad-bd29-9137a09bafa0",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": "Dean"
+    }, {
+      "id": "f2771246-1b85-48a6-8f6e-f21348f687c0",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b753fb3b-e28b-4916-a984-9915e51db7e7",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "asf@jmaailleeer.com"
+    }, {
+      "id": "7903d9a0-c732-4d25-9b12-43bb4073cf9c",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f832cd5-5b9e-401c-9c04-1604ef16745b",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "0895435682"
+    }, {
+      "id": "7c0e200e-e0d5-444a-9e60-0f2540d73a70",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f8f174a2-c864-49df-a69e-fdb6d6877bef",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "wwwwwww"
+    }, {
+      "id": "8cf668de-fee9-46af-b3b4-77fee0a5c952",
+      "comment": "",
+      "command": "click",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2a1b06b2-c4e5-4a75-9b66-5015c6d4a931",
+      "comment": "",
+      "command": "type",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "wwwwwww"
+    }, {
+      "id": "d947d8d2-a62a-4d33-a85a-dc400a84e350",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "name=btn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5143e48b-64ca-46dd-b79a-0e4bc63257fd",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "linkText=Регистрация",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fc7b3c1a-c9b6-4b1e-ab8a-186c95e304be",
+    "name": "TestSortByIncreasingPrice",
+    "commands": [{
+      "id": "2792bb95-5ad9-47e9-8a16-d285c30cbf3a",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d81c26b0-b78c-4d89-ad4c-f34a0e349875",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5984298e-56ab-4877-8be2-84a49f01328a",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Кучета')]",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b01196e0-e0d4-4762-93cc-a39bf1b60afe",
+      "comment": "",
+      "command": "click",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "388fe7ac-487a-409f-9d61-bd7814015ed7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selected:nth-child(3)",
+      "targets": [
+        ["css=.selected:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[3]/div/ul/li[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[3]", "xpath:position"],
+        ["xpath=//li[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6e9b836a-9924-4212-af2b-d59a1891df79",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(1) .right > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1.90 лв.')]", "xpath:innerText"]
+      ],
+      "value": "first_price"
+    }, {
+      "id": "040f4302-80c4-435c-88a7-08b2f548bb9c",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//span[contains(.,'2.20 лв.')]",
+      "targets": [
+        ["css=.col-sm-6:nth-child(2) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[2]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.20 лв.')]", "xpath:innerText"]
+      ],
+      "value": "second_price"
+    }, {
+      "id": "bc6327c2-47df-4de8-a367-df642cab150d",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[3]/div/div[2]/div[2]/div[2]/div/a/div[2]/span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(3) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[3]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:position"]
+      ],
+      "value": "third_price"
+    }, {
+      "id": "f17358cf-ea44-42c7-9a1b-ca588d287512",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${first_price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "first_price"
+    }, {
+      "id": "2ee8ffab-32c2-48a1-b3d7-8d8a1205f43c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${second_price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "second_price"
+    }, {
+      "id": "970d8a00-755b-4608-bee2-6d293cf76a2c",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${third_price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "third_price"
+    }, {
+      "id": "922a9694-934e-4c6c-9ff3-b708b9738fa6",
+      "comment": "",
+      "command": "if",
+      "target": "${first_price} >${second_price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3e789ac5-8b3d-4dfe-88bc-359dd1ff0636",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "011f857e-b012-4356-9fd5-b11fd2132d44",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${second_price} > ${third_price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf13ea3a-28c6-4eb2-a53a-cd2179ea8f79",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "7b04bf2a-63b7-4528-b05d-be0cf9adbfd5",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "615342e2-6ea9-4132-984a-7b6b9c61c3fa",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"correct order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "92e8ff8e-f689-4e97-9908-cb52d8e70626",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed7ca430-c8fc-4b06-9850-a20cc2bbce1e",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "correct order"
+    }, {
+      "id": "ce87bab8-6a75-41b8-b83b-da47150a63e6",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e5079cc-8acc-49b5-88b1-7d0d34ea3edc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": "Цена от ниска към висока"
+    }]
+  }, {
+    "id": "f9b96a01-0b6e-460c-8910-4fa5c2a67f04",
+    "name": "TestSortByDecreasingPricе",
+    "commands": [{
+      "id": "cf43bd19-96fb-486a-814d-3fa9f1f1d0df",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e4d17763-5090-433d-ae65-7143850a4316",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e0ec1180-f572-4bc2-b30a-b45da435d29d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Кучета')]",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fbd6c07f-b131-47ae-bd73-7e65344449a8",
+      "comment": "",
+      "command": "click",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0ca8882-6bd4-4d09-b8bc-6a36bf443cc2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-scroll li:nth-child(4)",
+      "targets": [
+        ["css=.selectric-scroll li:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[3]/div/ul/li[4]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[4]", "xpath:position"],
+        ["xpath=//li[contains(.,'Цена от висока към ниска')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec9ebbca-ed8e-478d-8d8f-85bb8669d5c6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(1) .right > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'468.90 лв.')]", "xpath:innerText"]
+      ],
+      "value": "first_price"
+    }, {
+      "id": "938ac19f-4374-4fd0-90e7-65887f8c710b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(4) .right > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(4) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[4]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'250.00 лв.')]", "xpath:innerText"]
+      ],
+      "value": "second_price"
+    }, {
+      "id": "87f6864d-49a6-4e65-82f6-3414e2f6f6c8",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(7) .right > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(7) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[7]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[7]/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'220.10 лв.')]", "xpath:innerText"]
+      ],
+      "value": "third_price"
+    }, {
+      "id": "c7dd2ead-4469-437b-b46f-96539879ed27",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${first_price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "first_price"
+    }, {
+      "id": "593ea4c7-47ab-4e1f-b0a6-93df9cb6f215",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${second_price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "second_price"
+    }, {
+      "id": "79379735-9c19-48cb-a35a-041b55944f94",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${third_price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "third_price"
+    }, {
+      "id": "2eb69c16-44f1-4e20-a695-456f1141ed9c",
+      "comment": "",
+      "command": "if",
+      "target": "${first_price} < ${second_price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ad9d0c93-1ade-4620-ac08-ed26ec6c1e73",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "2f995f47-7ace-4bb4-8a9e-d1219a73afc5",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${second_price} <  ${third_price}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ec61fd4b-3c78-45b0-92e4-6ef82b169c8a",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "b4d391f7-484a-433c-a841-aace4db7d839",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cb054901-4a71-4e08-800b-76f6664b580d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"correct order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "c06e14ae-c89e-44be-8cb8-9a07ef3ce89f",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b1b6bb5f-4065-458d-90c2-2f87d61a40cb",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "correct order"
+    }, {
+      "id": "dca682d7-e436-4a2b-928a-8ee789fb9a30",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f8f9bda-e24b-4827-95c5-600beee5554a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.label",
+      "targets": [
+        ["css=.label", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Цена от ниска към висока')]", "xpath:innerText"]
+      ],
+      "value": "Цена от висока към ниска"
+    }]
+  }, {
+    "id": "e75b9e71-ecb7-4cdf-871b-d4b3c42a79cd",
+    "name": "TestSortByNameAscending",
+    "commands": [{
+      "id": "c68c0ad2-10ad-4a6d-9fe0-e91704a60ba4",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a596951f-b250-46b9-8a31-602f8320fb4f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c8d2dfa8-fba0-4bba-a1d9-6e21999026a1",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(text(),'Кучета')]",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "389ad171-b782-469d-ad52-8a5ea19448c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c2ef796-6412-4b1d-986f-51c297807d7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-scroll li:nth-child(1)",
+      "targets": [
+        ["css=.selectric-scroll li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[3]/div/ul/li", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'По азбучен ред А-Я')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb96b17a-0b65-4f6f-9d78-0cbdf3cdbdbf",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(1) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'8in1 Delights Balls - M ')]", "xpath:innerText"]
+      ],
+      "value": "first_name"
+    }, {
+      "id": "c3586cf5-e5e8-485a-8cd9-64c609f652c7",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(2) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(2) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[2]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'8in1 Delights Balls - S')]", "xpath:innerText"]
+      ],
+      "value": "second_name"
+    }, {
+      "id": "0c70942c-17b9-4ea0-9004-cbfd4488aac6",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(3) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(3) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[3]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'8in1 Delights Beef Mini Bones - XS')]", "xpath:innerText"]
+      ],
+      "value": "third_name"
+    }, {
+      "id": "03ca89d4-022f-4b71-9a94-0382fa76f3b6",
+      "comment": "",
+      "command": "if",
+      "target": "${first_name} > ${second_name}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e9199bbb-9263-4436-8c72-964bfd0c4e4d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "a8f433f1-507d-4fb0-8b08-69f9f53f0aa1",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${second_name} > ${third_name}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4c9730e-e52b-440d-a19b-8ef7fd8beb10",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "3dd1bdd7-1d02-442e-9bdb-90130ba159fc",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b275a3c-9f7a-435a-b690-a6c456b03cc2",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"correct order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "98987938-7e92-4b78-ac2b-c0e060bf9946",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0126864c-1201-4fe0-b07d-a9148cebe27d",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "correct order"
+    }]
+  }, {
+    "id": "3d0f1dc1-177b-4d00-9cb7-519915c14409",
+    "name": "TestAddToCart",
+    "commands": [{
+      "id": "dcf67584-d376-44ae-8d89-ccd9b577e461",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ce6d116-3867-48ac-ab09-bfa6bc6b6a41",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8a06249-c225-4966-9494-05a143f5a662",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div[2]/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/2-kotki/45-hrani/')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/ul/li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c55d6436-36aa-4271-9553-7227316bb4d5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(1) .left > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .left > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28d8fdd3-5036-4f56-9979-ff7080b40de2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec6c2d94-9cdd-4721-b981-e0820a463ccf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dropdown-cart-button > .baloon",
+      "targets": [
+        ["css=#dropdown-cart-button > .baloon", "css:finder"],
+        ["xpath=//a[@id='dropdown-cart-button']/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6905074-df7a-4a9e-8e2f-fe5d5826b4f0",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//span[contains(.,'Виж количката')]",
+      "targets": [
+        ["css=.add-to-cart:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c3e0178-7886-465e-9848-162508d189b3",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.product-name",
+      "targets": [
+        ["css=.product-name", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/div/div/div[2]/a/p", "xpath:idRelative"],
+        ["xpath=//div[2]/a/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44d0f3de-d821-430d-87e8-2220834481cb",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.product-name",
+      "targets": [
+        ["css=.product-name", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/div/div/div[2]/a/p", "xpath:idRelative"],
+        ["xpath=//div[2]/a/p", "xpath:position"]
+      ],
+      "value": "Monge Grill Grain Free Beef - 0.100 кг."
+    }]
+  }, {
+    "id": "f43d1c5a-46db-4db6-bd9c-bef0097af9a3",
+    "name": "TestSortByNameDescending",
+    "commands": [{
+      "id": "39b0c373-ea28-4489-9657-6b16ff006d37",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "148e265c-bda2-417b-975e-ab46d21f1ed6",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed931823-14b3-4622-a6cb-7b29cefa51fa",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//li/a",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1739f7b4-87b2-43f6-b5e6-c5f561833b40",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=div:nth-child(1) > .row .main-navigation > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "518784c6-1788-4a41-a82b-b76007614150",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ae3eb271-6e90-4f8d-9108-0d7b7270e251",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b1d5796-9fc6-42cd-a487-fae7b2471425",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-scroll li:nth-child(2)",
+      "targets": [
+        ["css=.selectric-scroll li:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[3]/div/ul/li[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[2]", "xpath:position"],
+        ["xpath=//li[contains(.,'По азбучен ред Я-А')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "87d13c3e-6bc6-43a1-a819-e05133a108e5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=filter-block-image",
+      "targets": [
+        ["id=filter-block-image", "id"],
+        ["css=#filter-block-image", "css:finder"],
+        ["xpath=//img[@alt='1 седмица безплатно хранене на вашата котка']", "xpath:img"],
+        ["xpath=//img[@id='filter-block-image']", "xpath:attributes"],
+        ["xpath=//div[@id='top-banner']/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09e3a8b5-3ec8-4f96-9854-78cb723b0a8e",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.col-sm-6:nth-child(4) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(4) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[4]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Woolf Dog Soft Strips of Duck')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "1e87a8da-6b40-4cfa-8bf7-7a7f66888466",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.col-sm-6:nth-child(5) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(4) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[4]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Woolf Dog Soft Strips of Duck')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "c7917539-8c25-4d71-87d8-3c9bb9cd06ae",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.col-sm-6:nth-child(6) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(4) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[4]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Woolf Dog Soft Strips of Duck')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "7acc1619-983d-4df4-adb6-9456a3577a05",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=filter-block-image",
+      "targets": [
+        ["id=filter-block-image", "id"],
+        ["css=#filter-block-image", "css:finder"],
+        ["xpath=//img[@alt='1 седмица безплатно хранене на вашата котка']", "xpath:img"],
+        ["xpath=//img[@id='filter-block-image']", "xpath:attributes"],
+        ["xpath=//div[@id='top-banner']/div/div/a/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div/a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "094ed14a-bada-45e5-8148-8d4ab5ae513b",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(4) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(4) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[4]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Woolf Dog Soft Strips of Duck')]", "xpath:innerText"]
+      ],
+      "value": "a"
+    }, {
+      "id": "a58fc4b7-9025-4a24-8086-a622caf98e18",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(5) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(5) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[5]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[5]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Woolf Dog Sofit Duck Fillet')]", "xpath:innerText"]
+      ],
+      "value": "b"
+    }, {
+      "id": "94718eda-368b-40b9-9204-7bdaa724d1fa",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(6) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(6) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[6]/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[6]/div/div[2]/div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Woolf Dog Long Rabbit and Cod Sandwich')]", "xpath:innerText"]
+      ],
+      "value": "c"
+    }, {
+      "id": "4636f524-7cb4-4785-bc7c-82d3eaaf0598",
+      "comment": "",
+      "command": "echo",
+      "target": "${b}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "88f67d4a-e35f-4736-9ab1-529ee6a0c45e",
+      "comment": "",
+      "command": "if",
+      "target": "${a} < ${b}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6eb203e2-76f9-44bf-a98d-3068a2b96a87",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "994be184-5401-41ea-ac85-74715b70e3e7",
+      "comment": "",
+      "command": "elseIf",
+      "target": "${b} < ${c}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b8c3dc3-0af9-4c4d-b338-9826c5bea771",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"wrong order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "4ec927f1-c34e-44ea-8fd6-6e72ee20c503",
+      "comment": "",
+      "command": "else",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "933c4d98-73c1-4d7b-b087-1845858d3fb8",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return \"correct order\"",
+      "targets": [],
+      "value": "output"
+    }, {
+      "id": "221d16b6-6fac-4d02-b0b7-2e40be90556c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8015dcc9-7f94-4bf1-a0a0-a47b8cd91c11",
+      "comment": "",
+      "command": "assert",
+      "target": "output",
+      "targets": [],
+      "value": "correct order"
+    }]
+  }, {
+    "id": "fe340237-d7ce-4e31-bed3-0c82bcf603c6",
+    "name": "TestAddToCartSameItemCount ",
+    "commands": [{
+      "id": "bcee0765-7105-4307-b214-0decdd435a1c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7aaf941c-a3eb-41ce-81ef-9832a45d57ee",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cca6f7ab-4cec-44be-a34b-0d0c8ed98602",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "80359a43-a29a-4b29-ba7b-980713765696",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(1) .left > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .left > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "048f7197-091a-47d9-ba52-f5b8d194eaa0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-to-cart > .arrow",
+      "targets": [
+        ["css=.add-to-cart > .arrow", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1 бр.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "579d362c-cd9b-4183-9776-114bab4ef6c3",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.dropdown li:nth-child(1)",
+      "targets": [
+        ["css=.dropdown li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ac562797-92ca-4f53-a78f-152a7f50e2f5",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.dropdown li:nth-child(1)",
+      "targets": [
+        ["css=.dropdown li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b9c28820-123c-43bb-8702-4c912d783624",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown li:nth-child(5)",
+      "targets": [
+        ["css=.dropdown li:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'5')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f59ac67-9d58-4e45-9b47-d0037aafd236",
+      "comment": "",
+      "command": "storeText",
+      "target": "xpath=//div[2]/div/div/a/span/span",
+      "targets": [
+        ["css=.value", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span/span", "xpath:position"]
+      ],
+      "value": "count"
+    }, {
+      "id": "ced8a9f3-f5f1-4835-aa6d-abc485465361",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f54b167f-878f-45f6-845f-0c3b18b8318d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#dropdown-cart-button > .baloon",
+      "targets": [
+        ["css=#dropdown-cart-button > .baloon", "css:finder"],
+        ["xpath=//a[@id='dropdown-cart-button']/span", "xpath:idRelative"],
+        ["xpath=//li[4]/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa656452-ba1b-4bfb-9f99-14a6497c3b7d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Виж количката",
+      "targets": [
+        ["linkText=Виж количката", "linkText"],
+        ["css=.add-to-cart:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/cart/')])[5]", "xpath:href"],
+        ["xpath=//div[8]/div/div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5d7c2c71-e52c-43ae-b92f-65bbb310da52",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.cart-steps",
+      "targets": [
+        ["css=.cart-steps", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bacbd03a-bf32-47ef-8ccd-246293effc2c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.data-header .col-xl:nth-child(4)",
+      "targets": [
+        ["css=.data-header .col-xl:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div/div/div[4]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div/div/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1d900e17-71d7-46f5-bf36-2b774e93a3b6",
+      "comment": "",
+      "command": "verifyText",
+      "target": "css=.selectric-cart-quantity .label",
+      "targets": [
+        ["css=.selectric-cart-quantity .label", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/div/div/div[4]/div/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/div[2]/span", "xpath:position"]
+      ],
+      "value": "${count}"
+    }]
+  }, {
+    "id": "179b1bed-a919-4a19-b668-656fef6a8c2c",
+    "name": "TestAddToCartMultpleItems",
+    "commands": [{
+      "id": "6aac70d9-c117-4c63-9ec0-af2ff66247a5",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31b93c14-cc46-43c8-9719-86a8fc7ec154",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1fe30828-f657-4b6f-af1f-982bf24e349e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//a[contains(@href, '/catalog/1-kucheta/')]",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "69f0c460-c15f-44bf-815c-e7d34806d13a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1394999d-284f-47c3-aa89-1bca365ea29e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "4ece642d-e4d1-4131-99b3-68770120c34b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 6",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "98d3ff54-2cac-4d29-9004-8801a3587cba",
+      "comment": "",
+      "command": "while",
+      "target": "${id}<5",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31f1147a-a4fc-418c-8104-107b820d3e25",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(${id}) .right > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.20 лв.')]", "xpath:innerText"]
+      ],
+      "value": "price"
+    }, {
+      "id": "c599451d-9550-40ff-b10c-a8371f18d7b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(${id}) .left",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .left", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bbe6129-f569-4eb4-bc88-58aa87f23d24",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bce6039-468c-43a3-96ce-84b972d3ab38",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "price"
+    }, {
+      "id": "2abe6184-16cc-4b07-9ede-044ef5efff89",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${total}+${price}",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "f2e23116-1c1d-442f-bed4-3b9182da20d4",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=x",
+      "targets": [
+        ["linkText=x", "linkText"],
+        ["css=span > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'x')])[4]", "xpath:link"],
+        ["xpath=//div[@id='breadcrumbs']/div/div/div/div/ul/li[6]/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/catalog/1-kucheta/7-hrani/464-pauchove/')])[3]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c36deec-d98a-4716-a9bc-95202a426fa5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${id}+1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "268bcfdd-b93a-44d8-a217-76a8df86c3bc",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "83ae549a-5157-4de0-8164-2de8f2525318",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown-cart-button",
+      "targets": [
+        ["id=dropdown-cart-button", "id"],
+        ["linkText=1", "linkText"],
+        ["css=#dropdown-cart-button", "css:finder"],
+        ["xpath=//a[@id='dropdown-cart-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[5]", "xpath:href"],
+        ["xpath=//ul[2]/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fa8b8d8-9711-458e-9288-3ccc00a45be0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Виж количката",
+      "targets": [
+        ["linkText=Виж количката", "linkText"],
+        ["css=.add-to-cart:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/cart/')])[3]", "xpath:href"],
+        ["xpath=//div[8]/div/div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8e4f8e1a-07b5-4f48-a2b0-37ab8c54a7e4",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (parseFloat(${total}).toFixed(2))",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "b0f485d9-8cf0-47a9-874b-b6e32652e0d4",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=real_total",
+      "targets": [
+        ["id=real_total", "id"],
+        ["css=#real_total", "css:finder"],
+        ["xpath=//span[@id='real_total']", "xpath:attributes"],
+        ["xpath=//div[@id='cart-right-sidebar']/div/div[3]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'14.80 лв.')]", "xpath:innerText"]
+      ],
+      "value": "${total} лв."
+    }]
+  }, {
+    "id": "aeb2ffa2-484f-4b8e-bffd-c020cae4fafb",
+    "name": "TestRemoveItemsFromCart",
+    "commands": [{
+      "id": "fc3cce9e-0b4b-4d8f-aaa4-21f2dfa54fe0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4468d6f5-fe4e-4db6-856e-06df39b7bcc9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b0976c0-682b-4bf7-87ab-6b1b122aa2db",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//ul[@id='navigation']/li/a",
+      "targets": [
+        ["css=li > .active", "css:finder"],
+        ["xpath=//a[contains(text(),'Кучета')]", "xpath:link"],
+        ["xpath=//ul[@id='navigation']/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db2acd0f-710b-456e-9eae-2e1b30ecfb0b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "37efcb77-bce1-4a98-b657-6122ca118a5f",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=h1 > span",
+      "targets": [
+        ["css=h1 > span", "css:finder"],
+        ["xpath=//div[@id='breadcrumbs']/div/div/div/div/ul/li[4]/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "72f042db-d924-44ac-97cd-f59b236f4ee1",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1 > span",
+      "targets": [
+        ["css=h1 > span", "css:finder"],
+        ["xpath=//div[@id='breadcrumbs']/div/div/div/div/ul/li[4]/h1/span", "xpath:idRelative"],
+        ["xpath=//h1/span", "xpath:position"]
+      ],
+      "value": "Храни"
+    }, {
+      "id": "292ad1a5-da9e-40e7-b2d0-de46ace61c4b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(1) .left > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .left > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "da4e403c-ca9b-484f-b125-3f54987a982a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b73f9e01-c6f4-4d62-a8a3-b1446b5e9f70",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,494.6666564941406)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "93f370d6-81fd-4d56-b606-c15c0f605941",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=x",
+      "targets": [
+        ["linkText=x", "linkText"],
+        ["css=span > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'x')])[4]", "xpath:link"],
+        ["xpath=//div[@id='breadcrumbs']/div/div/div/div/ul/li[6]/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/catalog/1-kucheta/7-hrani/464-pauchove/')])[3]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2046e8c-7b1c-4f0e-a9dd-ffc299748b2e",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='grid-listing']/div/div/div[2]/div/div[2]/div[2]/div[2]/div/a/div/span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(2) .left > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div[2]/div/div[2]/div[2]/div[2]/div/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/div[2]/div[2]/div/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "947f5b34-68fe-4b57-bd43-29cdb97667a9",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,500)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "727a3736-894d-4959-8fc3-249c4fc88bf2",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "633e52dd-53a2-49e3-8a76-3729d67e0065",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown-cart-button",
+      "targets": [
+        ["id=dropdown-cart-button", "id"],
+        ["linkText=2", "linkText"],
+        ["css=#dropdown-cart-button", "css:finder"],
+        ["xpath=//a[@id='dropdown-cart-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[5]", "xpath:href"],
+        ["xpath=//ul[2]/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10917f1d-28cb-417d-b0ca-5a5d480f9361",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a/span",
+      "targets": [
+        ["css=.add-to-cart:nth-child(2) > span", "css:finder"],
+        ["xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Виж количката')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fdae3f9f-fa67-45a1-8f32-7bc54a62e54e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=x",
+      "targets": [
+        ["linkText=x", "linkText"],
+        ["css=.product-to-remove-4490 .remove-product", "css:finder"],
+        ["xpath=(//a[contains(text(),'x')])[4]", "xpath:link"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/div/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/cart/delete-product/16027/')]", "xpath:href"],
+        ["xpath=//div[2]/div/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bc1d8dc0-7ffc-482e-805f-447fddc7a01b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.product-to-remove-4489 .remove-product",
+      "targets": [
+        ["css=.product-to-remove-4489 .remove-product", "css:finder"],
+        ["xpath=(//a[contains(text(),'x')])[5]", "xpath:link"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/div[2]/div/div/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/cart/delete-product/16026/')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/div/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c670141-1f70-47ad-b82c-d138377421e9",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.no-products-in-basket",
+      "targets": [
+        ["css=.no-products-in-basket", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div/div[2]/p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f919db65-ed74-452c-8bcd-291e980ddfdc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.no-products-in-basket",
+      "targets": [
+        ["css=.no-products-in-basket", "css:finder"],
+        ["xpath=//div[@id='order']/div/div/div/div/div/div[2]/p", "xpath:idRelative"],
+        ["xpath=//div/div[2]/p", "xpath:position"]
+      ],
+      "value": "НЕ СТЕ ДОБАВИЛИ ПРОДУКТИ В КОЛИЧКАТА."
+    }, {
+      "id": "fc454d07-2d41-4969-a7b9-cb32b4630a6a",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=real_total",
+      "targets": [
+        ["id=real_total", "id"],
+        ["css=#real_total", "css:finder"],
+        ["xpath=//span[@id='real_total']", "xpath:attributes"],
+        ["xpath=//div[@id='cart-right-sidebar']/div/div[3]/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/div[3]/div[2]/span", "xpath:position"]
+      ],
+      "value": "0.00 лв."
+    }]
+  }, {
+    "id": "9a79f055-cd78-476e-9af9-34af219fb828",
+    "name": "TestShoppingCartTotalPrice",
+    "commands": [{
+      "id": "f37f04f0-9346-4112-9708-88297efab1b8",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48be26b9-a151-4ac3-8705-9cabaf27fbed",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ef6d9db2-e8a6-42dc-be4f-4ac013965817",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ebc4a44-dbdf-4ae9-a0da-8afbdcd22243",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(1) .right > span",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .right > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'2.20 лв.')]", "xpath:innerText"]
+      ],
+      "value": "price"
+    }, {
+      "id": "af2b65a9-1c43-46f6-848f-ced6b6ac80ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(1) .left",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .left", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d67e3dc-145f-4919-8a48-8fd559d1cfcb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.add-to-cart > .arrow",
+      "targets": [
+        ["css=.add-to-cart > .arrow", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'1 бр.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7ec07af-dc12-45d2-8e1d-be3caa99b9f0",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.dropdown li:nth-child(1)",
+      "targets": [
+        ["css=.dropdown li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea24847a-d1ff-4912-81be-87770f201ac5",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.dropdown li:nth-child(1)",
+      "targets": [
+        ["css=.dropdown li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/div/ul/li", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44d74a2b-69d2-4e7d-870c-bd02997f51ff",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown li:nth-child(7)",
+      "targets": [
+        ["css=.dropdown li:nth-child(7)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/div/ul/li[7]", "xpath:idRelative"],
+        ["xpath=//span/div/ul/li[7]", "xpath:position"],
+        ["xpath=//li[contains(.,'7')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "67d0f875-d250-46e2-8365-0b60daf72f75",
+      "comment": "",
+      "command": "click",
+      "target": "css=.text:nth-child(2)",
+      "targets": [
+        ["css=.text:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span[2]", "xpath:idRelative"],
+        ["xpath=//div/a/span[2]", "xpath:position"],
+        ["xpath=//span[contains(.,'Добави в количка')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4921aec2-f329-4254-aec0-16332a559dac",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${price}.replace(\"лв.\",\"\")*1",
+      "targets": [],
+      "value": "price"
+    }, {
+      "id": "13353599-0748-4f9e-8e6b-cf1325d9ed38",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.value",
+      "targets": [
+        ["css=.value", "css:finder"],
+        ["xpath=//div[@id='product-details']/div/div/div[2]/div[2]/div/div/a/span/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/a/span/span", "xpath:position"]
+      ],
+      "value": "quantity"
+    }, {
+      "id": "25c65c59-a73d-4172-9477-87a41b33975e",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdown-cart-button",
+      "targets": [
+        ["id=dropdown-cart-button", "id"],
+        ["linkText=1", "linkText"],
+        ["css=#dropdown-cart-button", "css:finder"],
+        ["xpath=//a[@id='dropdown-cart-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[4]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, 'javascript:;')])[5]", "xpath:href"],
+        ["xpath=//ul[2]/li[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b7d0fff-3357-47e9-8421-b6ec6de87edc",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Виж количката",
+      "targets": [
+        ["linkText=Виж количката", "linkText"],
+        ["css=.add-to-cart:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='has-cart-items']/div/div/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/cart/')])[3]", "xpath:href"],
+        ["xpath=//div[10]/div/div[2]/div/div/div[2]/div/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acb4c7aa-71a4-4970-ab0d-153a9a308484",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return (parseFloat(${price}*${quantity}+6).toFixed(2))",
+      "targets": [],
+      "value": "total"
+    }, {
+      "id": "3f81b72c-b230-4403-a9e1-2859ac13326f",
+      "comment": "",
+      "command": "echo",
+      "target": "${total}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "af22f148-6dbb-4b53-9714-d39c342e1f09",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=real_total",
+      "targets": [],
+      "value": "${total} лв."
+    }]
+  }, {
+    "id": "515f4793-1559-4441-a626-6e5950699123",
+    "name": "TestFilterItemsByMultipleFilters",
+    "commands": [{
+      "id": "5a21a0ee-7aa7-4fa0-9b85-33f479a44406",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "758020fb-b29c-4c09-9929-670a2b58c77a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae61ef37-1e73-4b03-89b8-b555190b7a1d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c0072ff-08fc-4fd0-a0cb-85a3bd8ef4cd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(1) li:nth-child(2) > label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(1) li:nth-child(2) > label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div/ul/li[2]/label)[10]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/ul/li[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4b1a3377-7416-4b3f-8b6a-b82453c57bf5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(2) li:nth-child(1) > label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(2) li:nth-child(1) > label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div[2]/ul/li/label)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div[2]/ul/li/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f6b67d5c-8f8a-44c5-8104-9418cc9da8db",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper .selected-filter-items label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper .selected-filter-items label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div/ul/li/label)[63]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/ul/li/label", "xpath:position"]
+      ],
+      "value": "brand"
+    }, {
+      "id": "deef261f-670c-4cf8-bc3f-e07012754486",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(2) > .selected-filter-items label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(2) > .selected-filter-items label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div[2]/ul/li/label)[3]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div[2]/ul/li/label", "xpath:position"]
+      ],
+      "value": "age"
+    }, {
+      "id": "d2570999-2b6a-4d5c-8a64-dfbededd579b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "89586e05-cb2d-47bf-84d8-345c09fbbd33",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "58675a43-6a66-47ba-901b-a59c73f3aa7a",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(${id}) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'8in1 Delights Bone - S')]", "xpath:innerText"]
+      ],
+      "value": "name"
+    }, {
+      "id": "71c46670-fac2-43ad-841d-338f05443fe1",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${name}.includes(${brand},${age})",
+      "targets": [],
+      "value": "res"
+    }, {
+      "id": "8c2b0499-7f28-4678-b04d-984bfa315d06",
+      "comment": "",
+      "command": "assert",
+      "target": "res",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "af81dbc3-2938-4bc7-b257-4f6fabdc91cb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${id}+1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "8226a294-eafa-47cd-8d4a-5b0d3679cee4",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${id}<3",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "fa80810d-eaba-4c3f-a360-0b7b01bf2cb4",
+    "name": "TestFilterItemsByOneFilter",
+    "commands": [{
+      "id": "4d5f09fb-f4b6-49a6-8c6d-9730fbce710c",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cc179958-faec-4969-9d9c-e69698ae38cd",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "faa5c53c-ed10-47ba-91a9-93ab79469f7b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2b3f666d-ce9b-4152-83fa-354a18e0a4e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(1) li:nth-child(1) > label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(1) li:nth-child(1) > label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div/ul/li/label)[137]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/ul/li/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a898054d-df94-4454-8679-c32af4a8dfef",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper .selected-filter-items label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper .selected-filter-items label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div/ul/li/label)[63]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/ul/li/label", "xpath:position"]
+      ],
+      "value": "brand"
+    }, {
+      "id": "f138573e-7469-4151-93f7-778515ca9015",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "3379b835-1fb5-49bb-a7cd-ed3eae46fa02",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cfdad31-1e4f-45c8-99d9-cbb13ef2aa31",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.col-sm-6:nth-child(${id}) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'8in1 Delights Bone - S')]", "xpath:innerText"]
+      ],
+      "value": "name"
+    }, {
+      "id": "23268c57-1d9c-4bdf-8bf8-9f499870c506",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${name}.includes(${brand})",
+      "targets": [],
+      "value": "res"
+    }, {
+      "id": "31767902-ebf1-4aea-aaff-7e428cdd83b1",
+      "comment": "",
+      "command": "assert",
+      "target": "res",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "d8f095b5-e4e7-4017-a183-57b4fc585787",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${id}+1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "b2d31c59-82ea-47ad-9e0c-132aa091c357",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${id}<9",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e2260c35-3cba-4535-a666-b4c8bc249f66",
+    "name": "TestFilterItemsCount",
+    "commands": [{
+      "id": "651008e8-1325-4f18-bdcc-3fdaaaa7bd05",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90913a34-3d5b-4c8e-bbb0-bb6932bbc205",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a0981b56-50c0-48b7-8238-93e600404bcd",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "08393671-1b48-4038-92e9-bc84335ec8ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(1) li:nth-child(2) > label",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper > .filter-group:nth-child(1) li:nth-child(2) > label", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div/ul/li[2]/label)[10]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/ul/li[2]/label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "765c6bdd-b5db-41a1-b0e6-c9cf37bdbf40",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.filter-form:nth-child(2) > #filter-wrapper .selected-filter-items .number",
+      "targets": [
+        ["css=.filter-form:nth-child(2) > #filter-wrapper .selected-filter-items .number", "css:finder"],
+        ["xpath=(//div[@id='filter-wrapper']/div/ul/li/span)[59]", "xpath:idRelative"],
+        ["xpath=//div[3]/form/div/div/ul/li/span", "xpath:position"]
+      ],
+      "value": "number_items_according_to_filter"
+    }, {
+      "id": "2b506e6a-6b89-45e4-8eb2-41907b3c3c64",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "98f0b586-dc7b-4d31-baf9-bed9a0af4ed1",
+      "comment": "",
+      "command": "while",
+      "target": "${id}<=${number_items_according_to_filter}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "80f31afe-c25b-4f07-a0da-1ca6ebf83ee8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.col-sm-6:nth-child(${id}) .product-title > span:nth-child(1)",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .product-title > span:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Acana Puppy & Junior Breed')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff517752-e359-441b-ac0d-6a0aba058730",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${id}+1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "95f5c7d1-133f-4ba0-bd5c-98f205ffd6cf",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1333de62-c599-4e77-8c0c-ec92d94fa26f",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.col-sm-6:nth-child(${id}) .product-title > span:nth-child(1)",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "623603d5-db82-4bba-ad00-3687b059a992",
+    "name": "TestSortByRating",
+    "commands": [{
+      "id": "0b8d4395-e60b-4008-a638-592a4f1d4f95",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "302ffaf1-6352-4cf7-bdec-3d636d36d617",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "164ecc83-6597-46de-92cb-b156cb48580a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bafe3353-93f0-40fa-83af-929e7071bef5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 5",
+      "targets": [],
+      "value": "prev_rating"
+    }, {
+      "id": "ae0120f7-84ae-4733-9dc2-1c2d6fc3e593",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "7c6d9533-63ab-4c59-99f7-ea407e9b46b9",
+      "comment": "",
+      "command": "while",
+      "target": "${id}<9",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8ba92db-d7a6-4572-bb3d-4c7ab051e597",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "49cd9604-8049-4512-8c7b-e8a14a1f21ee",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-scroll li:nth-child(5)",
+      "targets": [
+        ["css=.selectric-scroll li:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[3]/div/ul/li[5]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[5]", "xpath:position"],
+        ["xpath=//li[contains(.,'По потребителски рейтинг')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ba087352-99e6-434d-a570-923385626905",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.col-sm-6:nth-child(${id}) .left",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "43c21e4b-8ab4-4de7-bffe-157fe63e42d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.col-sm-6:nth-child(${id}) .left",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .left > span", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div[2]/div[2]/div[2]/div/a/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/a/div/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9ececa2f-782d-477e-b473-ff8cbda5f81c",
+      "comment": "",
+      "command": "storeText",
+      "target": "css=.write-review",
+      "targets": [
+        ["css=.write-review", "css:finder"],
+        ["xpath=//div[@id='product-subheading']/div[2]", "xpath:idRelative"],
+        ["xpath=//div/div/div/div/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": "rating"
+    }, {
+      "id": "92182197-34aa-4481-aa73-0fe7529af049",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${rating}.charAt(0)",
+      "targets": [],
+      "value": "rating"
+    }, {
+      "id": "85ce3227-bcbb-4177-9014-634d69120ea7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${prev_rating}>=${rating}",
+      "targets": [],
+      "value": "res"
+    }, {
+      "id": "d385f96c-d91a-4619-b9a7-630d9dbf90b5",
+      "comment": "",
+      "command": "assert",
+      "target": "res",
+      "targets": [],
+      "value": "true"
+    }, {
+      "id": "89de0148-814f-4a97-a2e2-12f67aeb70ba",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${rating}",
+      "targets": [],
+      "value": "prev_rating"
+    }, {
+      "id": "cb76472d-96b3-4435-8933-eca794a5acf5",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${id}+1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "b402ee5b-42d1-44d5-a637-58aa5756dc5e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=x",
+      "targets": [
+        ["linkText=x", "linkText"],
+        ["css=span > a", "css:finder"],
+        ["xpath=(//a[contains(text(),'x')])[3]", "xpath:link"],
+        ["xpath=//div[@id='breadcrumbs']/div/div/div/div/ul/li[6]/span/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/catalog/1-kucheta/7-hrani/38-suha-hrana/')])[4]", "xpath:href"],
+        ["xpath=//span/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "278851a9-e0bf-46b3-ab15-4f4a53f3f916",
+      "comment": "",
+      "command": "echo",
+      "target": "${rating}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e0b485b-820d-4a20-9dba-1facef6ec629",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bd8836e5-9217-4006-adbc-051cbc52a04e",
+    "name": "TestSortByNewProducts",
+    "commands": [{
+      "id": "d8810252-4906-4899-bd88-3a624d9d4081",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8ea20e44-ee69-443c-9843-0d35bb5ef7a4",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "48e05c9d-5aca-4859-a55d-88125b3a65f9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Храни",
+      "targets": [
+        ["linkText=Храни", "linkText"],
+        ["css=.active > .active", "css:finder"],
+        ["xpath=//div[@id='menu-dropdown']/div/div/div/div/div/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/catalog/1-kucheta/7-hrani/')]", "xpath:href"],
+        ["xpath=//div[3]/div/div/div/div/div/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Храни')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "644c85b2-7e7c-4208-9605-1159578ab373",
+      "comment": "",
+      "command": "click",
+      "target": "css=.button",
+      "targets": [
+        ["css=.button", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[2]/b", "xpath:idRelative"],
+        ["xpath=//b", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8517dc35-0fc1-47bf-b3f0-064cd0c6ab7e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.selectric-scroll li:nth-child(6)",
+      "targets": [
+        ["css=.selectric-scroll li:nth-child(6)", "css:finder"],
+        ["xpath=//div[@id='product-sort-wrapper']/div/div[3]/div/ul/li[6]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/ul/li[6]", "xpath:position"],
+        ["xpath=//li[contains(.,'Най-нови продукти')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a0255517-0975-4fef-8a7d-ba30f2ab52da",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "a26aff5e-4000-4d8b-95c6-57e248656fca",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d440404c-1598-42bd-aa7d-0510aa603ecc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.col-sm-6:nth-child(${id}) .flag",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .flag", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "36e1be87-e899-49db-91db-c57284fef852",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.col-sm-6:nth-child(${id}) .flag",
+      "targets": [
+        ["css=.col-sm-6:nth-child(1) .flag", "css:finder"],
+        ["xpath=//div[@id='grid-listing']/div/div/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/div/div/div/div/div/div", "xpath:position"]
+      ],
+      "value": "НОВО"
+    }, {
+      "id": "9156dcdc-f008-49ed-a272-e0971a3e7fe6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${id}+1",
+      "targets": [],
+      "value": "id"
+    }, {
+      "id": "0eb7b1da-4a3b-4f78-b977-1a20de3f8fd5",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${id}<6",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "1496ff42-b25d-42fa-bb9d-16ac1886483a",
+    "name": "TestRegistrationWIthIncorrectRepeatedPassword",
+    "commands": [{
+      "id": "a6ca5a58-cb64-4cd9-86eb-e4c6142b2e28",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1f94e6f3-b907-4914-81ab-26862bf79856",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1296x696",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ab2626c-f4c9-4862-8960-9bd52de532d8",
+      "comment": "",
+      "command": "click",
+      "target": "id=profile-dropdown-button",
+      "targets": [
+        ["id=profile-dropdown-button", "id"],
+        ["css=#profile-dropdown-button", "css:finder"],
+        ["xpath=//a[@id='profile-dropdown-button']", "xpath:attributes"],
+        ["xpath=//ul[@id='header-icons']/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/auth/?redirect_to=/')]", "xpath:href"],
+        ["xpath=//ul[2]/li[3]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c97ef9b-1f64-4cb9-a740-eee2c9b69454",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=#register-tabs > li:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[9]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "3bc2879c-82e3-432b-acb7-8ad3eb5dd0f7",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[13]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "21f2b1de-6552-4694-9e5c-a9d5c6fd9915",
+      "comment": "",
+      "command": "assertText",
+      "target": "linkText=Регистрация",
+      "targets": [
+        ["linkText=Регистрация", "linkText"],
+        ["css=.active > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Регистрация')]", "xpath:link"],
+        ["xpath=//ul[@id='register-tabs']/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#register')]", "xpath:href"],
+        ["xpath=//div[14]/div/div/div/div/div/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": "Регистрация"
+    }, {
+      "id": "7240bacf-4d71-4cb6-941e-77c96a73a214",
+      "comment": "",
+      "command": "click",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa54e01d-0456-4dd4-8fa1-57a8fcb4fdd7",
+      "comment": "",
+      "command": "type",
+      "target": "id=firstname",
+      "targets": [
+        ["id=firstname", "id"],
+        ["name=firstname", "name"],
+        ["css=#firstname", "css:finder"],
+        ["xpath=//input[@id='firstname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[2]/input", "xpath:position"]
+      ],
+      "value": "John"
+    }, {
+      "id": "2be9beac-143f-4f25-bb62-ad8d5bfa8b36",
+      "comment": "",
+      "command": "click",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f4c135b-3dcd-4ced-b6fa-6a2e8015ddda",
+      "comment": "",
+      "command": "type",
+      "target": "id=lastname",
+      "targets": [
+        ["id=lastname", "id"],
+        ["name=lastname", "name"],
+        ["css=#lastname", "css:finder"],
+        ["xpath=//input[@id='lastname']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[3]/input", "xpath:position"]
+      ],
+      "value": "Dean"
+    }, {
+      "id": "c20fb6e0-7964-451b-af15-2a1e87c307a3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#register-form > .register-item:nth-child(4)",
+      "targets": [
+        ["css=#register-form > .register-item:nth-child(4)", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[4]", "xpath:idRelative"],
+        ["xpath=//div[2]/form/div[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a8135645-223c-491a-91e6-8287bdff08b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "96641404-0e0c-4767-96e6-cc04a42052fe",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "alex@abv.bg"
+    }, {
+      "id": "55a24ee8-e3ac-4e38-a521-d57bb4058c53",
+      "comment": "",
+      "command": "click",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56d459d6-2976-4835-9560-d2a66ad32c76",
+      "comment": "",
+      "command": "type",
+      "target": "id=phone_input",
+      "targets": [
+        ["id=phone_input", "id"],
+        ["name=phone_input", "name"],
+        ["css=#phone_input", "css:finder"],
+        ["xpath=//input[@id='phone_input']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[5]/div/input", "xpath:idRelative"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": "0895435682"
+    }, {
+      "id": "37f9e390-fcc6-4c7f-83b2-51a3ce088fdd",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acff288b-192f-4cb2-a5a0-24752afb5a65",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[6]/input", "xpath:idRelative"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "wwwww"
+    }, {
+      "id": "6d5f0a5a-ff36-456b-a6ac-cc59d0805219",
+      "comment": "",
+      "command": "click",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a5bf1a2-7613-4cb0-80d1-f199723aa506",
+      "comment": "",
+      "command": "type",
+      "target": "id=repeat_password",
+      "targets": [
+        ["id=repeat_password", "id"],
+        ["name=repeat_password", "name"],
+        ["css=#repeat_password", "css:finder"],
+        ["xpath=//input[@id='repeat_password']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[7]/input", "xpath:idRelative"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "wwww"
+    }, {
+      "id": "e0eaf1b5-c8db-4a06-a3db-7afe6e27001e",
+      "comment": "",
+      "command": "click",
+      "target": "name=btn",
+      "targets": [
+        ["name=btn", "name"],
+        ["css=.g-recaptcha", "css:finder"],
+        ["xpath=//button[@name='btn']", "xpath:attributes"],
+        ["xpath=//form[@id='register-form']/div[17]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Регистрация')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "26b1da02-505d-44a5-89cf-c5951dc155f5",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.error-visible",
+      "targets": [
+        ["css=.error-visible", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[7]/span", "xpath:idRelative"],
+        ["xpath=//form/div[7]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Моля, въведете отново своята парола.')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e1ca5fe-9f48-42b7-b0a8-fcae317ad7fa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.error-visible",
+      "targets": [
+        ["css=.error-visible", "css:finder"],
+        ["xpath=//form[@id='register-form']/div[7]/span", "xpath:idRelative"],
+        ["xpath=//div[7]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Моля, въведете отново своята парола.')]", "xpath:innerText"]
+      ],
+      "value": "Моля, въведете отново своята парола."
+    }]
+  }],
+  "suites": [{
+    "id": "656447bd-3820-4e81-80a9-31eb477f426f",
+    "name": "RegistrationTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ff1a2eb8-500f-4829-85ff-96a614a7f56c", "6785ae0b-b86e-4023-8eef-198250bae584", "b3d2ccb1-0967-4809-9ed0-2c8b9943a4a7", "dd27a607-fde1-4929-a2be-ff512d4a143d", "1496ff42-b25d-42fa-bb9d-16ac1886483a"]
+  }, {
+    "id": "cf39ac8f-bedf-40cc-824b-4707e1822ede",
+    "name": "Sorting tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["f43d1c5a-46db-4db6-bd9c-bef0097af9a3", "e75b9e71-ecb7-4cdf-871b-d4b3c42a79cd", "fc7b3c1a-c9b6-4b1e-ab8a-186c95e304be", "f9b96a01-0b6e-460c-8910-4fa5c2a67f04", "623603d5-db82-4bba-ad00-3687b059a992", "bd8836e5-9217-4006-adbc-051cbc52a04e"]
+  }, {
+    "id": "3f25b968-fea1-43a5-909e-3edc416e1386",
+    "name": "CartTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3d0f1dc1-177b-4d00-9cb7-519915c14409", "179b1bed-a919-4a19-b668-656fef6a8c2c", "fe340237-d7ce-4e31-bed3-0c82bcf603c6", "aeb2ffa2-484f-4b8e-bffd-c020cae4fafb", "9a79f055-cd78-476e-9af9-34af219fb828"]
+  }, {
+    "id": "1679b763-9792-4645-8607-451b78a1a282",
+    "name": "Filtering tests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["fa80810d-eaba-4c3f-a360-0b7b01bf2cb4", "515f4793-1559-4441-a626-6e5950699123", "e2260c35-3cba-4535-a666-b4c8bc249f66"]
+  }],
+  "urls": ["https://www.zoomall.bg/"],
+  "plugins": []
+}
